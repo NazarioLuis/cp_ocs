@@ -16,13 +16,15 @@
 {translate key="user.account.selectSchedConf"}:
 <ul>
 {iterate from=schedConfs item=schedConf}
+	{ if $schedConf->getActive() }
 	<li>
-		{if $source}
+		{if $source}			
 			<a href="{url schedConf=$schedConf->getPath() page="user" op="account" source=$source|escape}">{$schedConf->getFullTitle()|escape}</a>
 		{else}
 			<a href="{url schedConf=$schedConf->getPath() page="user" op="account"}">{$schedConf->getFullTitle()|escape}</a>
 		{/if}
 	</li>
+	{/if}
 {/iterate}
 </ul>
 {if $schedConfs->wasEmpty()}

@@ -133,9 +133,9 @@
 
 	<!-- Localize the groups table -->
 	<sql>
-		<query>INSERT INTO group_settings (group_id, setting_name, setting_value, setting_type, locale) SELECT g.group_id, 'title', g.title, 'string', c.primary_locale FROM groups g, conferences c WHERE g.conference_id = c.conference_id AND g.title IS NOT NULL AND g.title != ''</query>
-		<query>INSERT INTO group_settings (group_id, setting_name, setting_value, setting_type, locale) SELECT g.group_id, 'title', g.title_alt1, 'string', cs.setting_value FROM groups g, conference_settings cs WHERE g.conference_id = cs.conference_id AND cs.setting_name = 'alternateLocale1' AND g.title_alt1 IS NOT NULL AND g.title_alt1 != '' AND cs.setting_value IS NOT NULL AND cs.setting_value != ''</query>
-		<query>INSERT INTO group_settings (group_id, setting_name, setting_value, setting_type, locale) SELECT g.group_id, 'title', g.title_alt2, 'string', cs.setting_value FROM groups g, conference_settings cs WHERE g.conference_id = cs.conference_id AND cs.setting_name = 'alternateLocale2' AND g.title_alt2 IS NOT NULL AND g.title_alt2 != '' AND cs.setting_value IS NOT NULL AND cs.setting_value != ''</query>
+		<query>INSERT INTO group_settings (group_id, setting_name, setting_value, setting_type, locale) SELECT g.group_id, 'title', g.title, 'string', c.primary_locale FROM `groups` g, conferences c WHERE g.conference_id = c.conference_id AND g.title IS NOT NULL AND g.title != ''</query>
+		<query>INSERT INTO group_settings (group_id, setting_name, setting_value, setting_type, locale) SELECT g.group_id, 'title', g.title_alt1, 'string', cs.setting_value FROM `groups` g, conference_settings cs WHERE g.conference_id = cs.conference_id AND cs.setting_name = 'alternateLocale1' AND g.title_alt1 IS NOT NULL AND g.title_alt1 != '' AND cs.setting_value IS NOT NULL AND cs.setting_value != ''</query>
+		<query>INSERT INTO group_settings (group_id, setting_name, setting_value, setting_type, locale) SELECT g.group_id, 'title', g.title_alt2, 'string', cs.setting_value FROM `groups` g, conference_settings cs WHERE g.conference_id = cs.conference_id AND cs.setting_name = 'alternateLocale2' AND g.title_alt2 IS NOT NULL AND g.title_alt2 != '' AND cs.setting_value IS NOT NULL AND cs.setting_value != ''</query>
 	</sql>
 
 	<!-- Localize the announcement_types table -->

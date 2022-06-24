@@ -142,7 +142,7 @@
 </tr>
 	
 <tr valign="top">
-	<td class="label">{fieldLabel name="phone" key="user.phone"}</td>
+	<td class="label">{fieldLabel name="phone" required="true" key="user.phone"}</td>
 	<td class="value"><input type="text" name="phone" id="phone" value="{$phone|escape}" size="15" maxlength="24" class="textField" /></td>
 </tr>
 	

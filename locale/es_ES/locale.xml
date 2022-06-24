@@ -96,7 +96,7 @@
 	<!-- Navigation -->
 	<message key="navigation.conferenceHelp">Ayuda</message>
 	<message key="navigation.account">Cuenta</message>
-	<message key="navigation.archive">Fichero</message>
+	<message key="navigation.archive">Ediciones Anteriores</message>
 	<message key="navigation.current">Eventos en curso</message>
 	<message key="navigation.otherConferences">Otros eventos</message>
 	<message key="navigation.browseByConference">Por evento</message>

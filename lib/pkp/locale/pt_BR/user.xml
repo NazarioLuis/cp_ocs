@@ -55,11 +55,12 @@
 	<message key="user.myAccount">Mesclar cadastro</message>
 	<message key="user.name">Nome</message>
 	<message key="user.password">Senha</message>
-	<message key="user.phone">Fone</message>
+	<message key="user.phone">Celular</message>
 	<message key="user.profile.changePasswordInstructions">Digite as senhas atual e nova para alterar a senha de acesso ao cadastro.</message>
 	<message key="user.profile.editProfile">Editar perfil</message>
 	<message key="user.profile.form.emailRequired">Endereço de e-mail válido obrigatório.</message>
-	<message key="user.profile.form.firstNameRequired">Prenome obrigatório.</message>
+	<message key="user.profile.form.phoneRequired">Número de celular obrigatório.</message>
+	<message key="user.profile.form.firstNameRequired">Nome obrigatório.</message>
 	<message key="user.profile.form.lastNameRequired">Sobrenome obrigatório.</message>
 	<message key="user.profile.form.newPasswordRequired">Nova senha obrigatória.</message>
 	<message key="user.profile.form.oldPasswordInvalid">Senha atual incorreta.</message>

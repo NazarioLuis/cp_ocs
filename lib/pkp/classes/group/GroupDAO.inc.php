@@ -33,7 +33,7 @@ class GroupDAO extends DAO {
 			$params[] = (int) $assocId;
 		}
 		$result =& $this->retrieve(
-			'SELECT * FROM groups WHERE group_id = ?' . ($assocType !== null?' AND assoc_type = ? AND assoc_id = ?':''), $params
+			'SELECT * FROM `groups` WHERE group_id = ?' . ($assocType !== null?' AND assoc_type = ? AND assoc_id = ?':''), $params
 		);
 
 		$returner = null;
@@ -58,7 +58,7 @@ class GroupDAO extends DAO {
 		if ($context !== null) $params[] = (int) $context;
 
 		$result =& $this->retrieveRange(
-			'SELECT * FROM groups WHERE assoc_type = ? AND assoc_id = ?' . ($context!==null?' AND context = ?':'') . ' ORDER BY context, seq',
+			'SELECT * FROM `groups` WHERE assoc_type = ? AND assoc_id = ?' . ($context!==null?' AND context = ?':'') . ' ORDER BY context, seq',
 			$params, $rangeInfo
 		);
 
@@ -180,7 +180,7 @@ class GroupDAO extends DAO {
 		$groupMembershipDao =& DAORegistry::getDAO('GroupMembershipDAO');
 		$groupMembershipDao->deleteMembershipByGroupId($groupId);
 		$this->update('DELETE FROM group_settings WHERE group_id = ?', $groupId);
-		return $this->update('DELETE FROM groups WHERE group_id = ?', $groupId);
+		return $this->update('DELETE FROM `groups` WHERE group_id = ?', $groupId);
 	}
 
 	/**
@@ -205,7 +205,7 @@ class GroupDAO extends DAO {
 		if ($assocType !== null) $params = array((int) $assocType, (int) $assocId);
 		else $params = array();
 		$result =& $this->retrieve(
-			'SELECT group_id FROM groups' .
+			'SELECT group_id FROM `groups`' .
 			($assocType !== null?' WHERE assoc_type = ? AND assoc_id = ?':'') .
 			' ORDER BY seq',
 			$params

@@ -216,6 +216,11 @@ class SchedConf extends DataObject {
 		return $this->getData('endDate');
 	}
 
+	function getActive() {
+		return $this->getData('endDate') == null ||
+				 Core::getCurrentDate() < $this->getData('endDate');
+	}
+
 	/**
 	 * Set end date of scheduled conference.
 	 * @param $endDate date

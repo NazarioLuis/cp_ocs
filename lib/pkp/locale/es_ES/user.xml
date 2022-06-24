@@ -55,10 +55,11 @@
 	<message key="user.myAccount">Mis cuentas</message>
 	<message key="user.name">Nombre</message>
 	<message key="user.password">Contraseña</message>
-	<message key="user.phone">Teléfono</message>
+	<message key="user.phone">Celular</message>
 	<message key="user.profile.changePasswordInstructions">Introduzca su contraseña actual y la nueva para cambiar la contraseña de su cuenta.</message>
 	<message key="user.profile.editProfile">Editar perfil</message>
 	<message key="user.profile.form.emailRequired">Es necesaria una dirección de correo-e válida.</message>
+	<message key="user.profile.form.phoneRequired">Es necesaria un número de celular.</message>
 	<message key="user.profile.form.firstNameRequired">Es necesario el nombre.</message>
 	<message key="user.profile.form.lastNameRequired">Es necesario el apellido.</message>
 	<message key="user.profile.form.newPasswordRequired">Debe introducir su nueva contraseña.</message>
